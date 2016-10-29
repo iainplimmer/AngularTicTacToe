@@ -1,0 +1,47 @@
+
+.header {
+    padding: 50px 0;
+    color: #ffffff;
+    text-shadow: 0 1px 0 rgba(0,0,0,.1);
+    background-color: #6f5499;
+}
+
+.score-board {
+    padding: 20px 0;
+    color: #000000;
+    text-shadow: 0 1px 0 rgba(0,0,0,.1);
+                
+}
+
+.game-board {
+    padding: 20px 0;                        
+}
+
+.header p {
+    color: #cdbfe3;
+}
+
+.header a {
+    color: #ffffff;
+}
+
+.modal {
+    display:block;
+}
+
+.modal-header, 
+.btn-default {
+    color: #ffffff;    
+    background-color: #6f5499;
+}
+
+.modal-dialog {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width:500px;
+    height:300px;
+}
