@@ -14,10 +14,19 @@
     <div class="header"> 
         <div class="container">
             <div class="col-md-12"> 
-                <h1>AngularJS Noughts & Crosses</h1> 
-                <p>Computer opponent coming soon......</p>
+                <h1>Noughts & Crosses</h1>                 
                 <p>Fancy a quick game of noughts and crosses? Get a friend or play alone. Written by <a href="http://www.iainplimmer.co.uk" target="_blank">Iain Plimmer</a></p>
-                <p>Github can be found here <a href="https://github.com/iainplimmer/ngNoughtsAndCrosses" target="_blank">https://github.com/iainplimmer/ngNoughtsAndCrosses</a></p>            
+                <p>AI Computer opponent coming ...... this one is just random ;)</p>
+                <p>Github can be found here <a href="https://github.com/iainplimmer/ngNoughtsAndCrosses" target="_blank">https://github.com/iainplimmer/ngNoughtsAndCrosses</a></p>
+
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-primary" ng-class="{ 'active': $ctrl.ComputerOpponent}">
+                        <input type="checkbox" ng-click="$ctrl.ToggleOpponent()"> Computer opponent
+                    </label>
+                    <label class="btn btn-primary" ng-class="{ 'active': !$ctrl.ComputerOpponent}">
+                        <input type="checkbox" ng-click="$ctrl.ToggleOpponent()"> Play against a friend
+                    </label>
+                </div>            
             </div> 
         </div>
     </div>         

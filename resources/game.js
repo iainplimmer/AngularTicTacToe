@@ -7,7 +7,8 @@ angular.module('ngNoughtsAndCrosses', [])
             "c1" : "", "c2" : "", "c3" : "" 
     })
     .controller('ctrl', function (Grid) {
-        var vm = this;       
+        var vm = this;    
+        vm.ComputerOpponent = true;   
 
         //  Let's initialise the board here with the game status, turn, player number and some messages
         vm.ResetGame = function () {
@@ -55,8 +56,25 @@ angular.module('ngNoughtsAndCrosses', [])
                     // It's the next turn then!  
                     vm.Player = (vm.Player == 'X') ? 'O' : 'X';
                 }
+
+                //  If it's a O then its the computer's turn
+                if (vm.ComputerOpponent && vm.Player == 'O') {    
+                    var emptyCells = [];            
+                    for(var propertyName in Grid) { 
+                        if (Grid[propertyName] == '') {
+                            emptyCells.push(propertyName)
+                        }        
+                    }      
+                    vm.TakeTurn(emptyCells[Math.floor(Math.random() * emptyCells.length)])
+                }
                 
             }
+        }
+
+        //  Toggle the opponent and restart the game
+        vm.ToggleOpponent = function () {
+            vm.ComputerOpponent = !vm.ComputerOpponent;  
+            vm.ResetGame();  
         }
     })
 })();
