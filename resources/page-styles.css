@@ -29,11 +29,24 @@
     display:block;
 }
 
-.modal-header, 
+.modal-header,
 .btn-default {
     color: #ffffff;    
     background-color: #6f5499;
 }
+
+.btn-primary, .btn-primary:hover {
+    background-color: #8064A2;
+    border-color: #8064A2;    
+}
+
+.active {
+    background-color: #cdbfe3 !important;
+    color: #ffffff !important;
+    border-color: #cdbfe3 !important;
+    box-shadow:none !important;
+}
+
 
 .modal-dialog {
     position: absolute;
